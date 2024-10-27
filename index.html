@@ -12,18 +12,10 @@
         <button onclick="startExperience()" class="start-button">Clique aqui para ver</button>
     </div>
 
-    <audio id="music" src="musica.mp3" preload="auto"></audio>
-
     <script>
         function startExperience() {
-            // Toca a música
-            const music = document.getElementById("music");
-            music.play();
-            
-            // Redireciona para a página principal
-            setTimeout(() => {
-                window.location.href = "main.html";
-            }, 500); // Dá um pequeno delay antes de ir para a página principal
+            // Redireciona para a página principal ao clicar no botão
+            window.location.href = "main.html";
         }
     </script>
 </body>

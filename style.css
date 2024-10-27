@@ -15,39 +15,7 @@ body {
     color: #333;
 }
 
-/* Estilo da página de introdução */
-.intro-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    text-align: center;
-}
-
-.intro-container h1 {
-    font-size: 2rem;
-    color: #e60073;
-    margin-bottom: 20px;
-}
-
-.start-button {
-    padding: 10px 20px;
-    font-size: 1.2rem;
-    color: #fff;
-    background-color: #e60073;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    margin-top: 20px;
-}
-
-.start-button:hover {
-    background-color: #cc0066;
-}
-
-/* Estilo da página principal */
+/* Container principal */
 .container {
     text-align: center;
     max-width: 500px;
@@ -113,15 +81,9 @@ h1 {
     background-color: #333;
 }
 
+/* Estilo para mensagens de resposta */
 .special-message {
     font-size: 1.2rem;
     color: #e60073;
     margin-top: 20px;
-    opacity: 0;
-    transition: opacity 0.5s;
-    display: none;
-}
-
-.special-message.show {
-    opacity: 1;
 }
