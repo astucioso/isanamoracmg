@@ -19,17 +19,13 @@
         <p class="message">Desde que te conheci, minha vida ficou mais especial e colorida. Sinto que quero estar ao seu lado em todos os momentos e fazer você sorrir todos os dias. <strong>Quer ser minha namorada?</strong></p>
         
         <div class="buttons">
-            <button class="yes-button" onclick="showPositiveMessage()">Sim, eu aceito!</button>
-            <button class="no-button" onclick="showNegativeMessage()">Não, eu não aceito!</button>
+            <button class="yes-button" onclick="showMessage('positive')">Sim, eu aceito!</button>
+            <button class="no-button" onclick="showMessage('negative')">Não, eu não aceito!</button>
         </div>
 
         <!-- Mensagens que aparecem ao clicar nos botões -->
-        <p id="positive-message" class="special-message" style="display: none;">
-            ❤️ Você me faz a pessoa mais feliz do mundo minha princesa! eu te amo ❤️
-        </p>
-        <p id="negative-message" class="special-message" style="display: none;">
-            amor, isso não é uma opção aceita logo essa porra
-        </p>
+        <p id="positive-message" class="special-message">❤️ Você me faz a pessoa mais feliz do mundo minha princesa! eu te amo ❤️</p>
+        <p id="negative-message" class="special-message">amor, isso não é uma opção aceita essa porra logo</p>
     </div>
 
     <!-- Adicionando o áudio diretamente na página principal -->
@@ -42,14 +38,17 @@
             music.play();
         }
 
-        function showPositiveMessage() {
-            document.getElementById("positive-message").style.display = "block";
-            document.getElementById("negative-message").style.display = "none";
-        }
+        function showMessage(type) {
+            // Esconde ambas as mensagens
+            document.getElementById("positive-message").style.visibility = "hidden";
+            document.getElementById("negative-message").style.visibility = "hidden";
 
-        function showNegativeMessage() {
-            document.getElementById("negative-message").style.display = "block";
-            document.getElementById("positive-message").style.display = "none";
+            // Mostra a mensagem correspondente
+            if (type === 'positive') {
+                document.getElementById("positive-message").style.visibility = "visible";
+            } else {
+                document.getElementById("negative-message").style.visibility = "visible";
+            }
         }
     </script>
 </body>
