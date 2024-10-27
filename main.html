@@ -6,7 +6,7 @@
     <title>Quer namorar comigo?</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body onload="playMusic()">
     <div class="container">
         <h1>Quer namorar comigo?</h1>
         
@@ -24,14 +24,23 @@
         </div>
 
         <p id="positive-message" class="special-message" style="display: none;">
-            ❤️ Você me fez a pessoa mais feliz do mundo minha princesa! teamooooo❤️
+            ❤️ Você me fez a pessoa mais feliz do mundo minha princesa! eu te amo❤️
         </p>
         <p id="negative-message" class="special-message" style="display: none;">
-            amor, isso não é uma opção valida, aceita essa porra logo fdp
+        amor, isso não é uma opção valida aceita logo essa porra 
         </p>
     </div>
 
+    <!-- Adicionando o áudio diretamente na página principal -->
+    <audio id="music" src="musica.mp3" preload="auto" loop></audio>
+
     <script>
+        function playMusic() {
+            // Reproduz a música ao carregar a página
+            const music = document.getElementById("music");
+            music.play();
+        }
+
         function showPositiveMessage() {
             document.getElementById("positive-message").style.display = "block";
             document.getElementById("negative-message").style.display = "none";
